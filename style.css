@@ -1,0 +1,175 @@
+/*-----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------- RESPONSIVE -----------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width:960px) {
+    .box-cafeterias{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------- GLOBAL STYLES --------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------*/
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+}
+body{
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------ FONTS & TEXTSTYLES -----------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------*/
+/* ----- HEADER: LOGO ----- */
+.logo{ color: #EDE0D4; font-size: 50px; }
+.boxHeader i{ margin: 0px 20px; font-size: 20pt; }
+
+
+/* ----- DESCRIPCION: ABOUT ----- */
+#about{ margin: 20px; text-align: justify; }
+
+/* ----- CAFETERIAS: TITULO ----- */
+#tituloCafeteria{color: #5E503F;}
+#ExplicacionFuncionamientoCards{ margin: 5px; font-size: 12px; color: darkslategrey; }
+/* ----- CAFETERIAS: CARDCAFETERIAS ----- */
+
+
+/* ----- CAFETERIAS: CAJAMAPS ----- */
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------ BODY -------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------*/
+/* BOX-HEADER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.boxHeader{
+    padding: 30px 0px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #5E503F;
+    border-bottom: solid 5px #EDE0D4;
+}
+/* BOX-DESCRIPCION
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.boxDescripcion{
+    background-color: #5E503F;
+    color: #EDE0D4;
+    padding: 20px;
+    text-align: center !important;
+}
+/* BOX-CAFETERIAS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.box-cafeterias{
+    text-align: center;
+    display: block;
+    margin-top: 0px;
+    margin: 50px 20px 0px 20px;
+}
+/* ----- CAFETERIAS: CAFETIAS-CARDS----- */
+/* CAJA PRINCIPAL */
+.CardCafeterias{ 
+    max-width: 100%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 0px 30px;
+}
+/* CAJA CARTAS */
+.card-wrap{
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 300px;
+    max-width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+.card,
+.front,
+.back,
+.card-photo{
+    width: 100%;
+    height: 100%;
+}
+/* CAJA CARTA */
+.card{ 
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s, box-shadow 0.4s;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 
+                0 1px 3px 1px rgba(60, 64, 67, 0.149);
+    border-radius: 10px;            
+}
+.card:hover{
+    box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.302),
+                0 4px 8px 3px rgba(60, 64, 67, 0.149);
+}
+
+/* CARA PRINCIPAL CARTA (SOLO SE ENCUENTRA IMG) */
+.card-face{
+    position: absolute;
+    backface-visibility: hidden;
+}
+/* IMG */
+.card-photo{ border-radius: 10px;}
+
+/* CARA POSTERIOR CARTA (SE ENCUENTA NOMBRE, ENLACE, DESCRIPCION)  */
+.back{
+    background-color: whitesmoke;
+    transform: rotateY(180deg);
+    text-align: center;
+    color: darkgray;
+    border-radius: 10px;
+    font-weight: 600;
+}
+.back h2{ margin: 10px; }
+.back p{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* ANIMACION PARA VOLTEAR LA CARTA */
+.flipcard{opacity: 0; }
+input:checked + .card{ transform: rotateY(180deg); }
+
+
+/* ----- CAFETERIAS: CAJAMAPS ----- */
+/* MAPS */
+.cajaMaps{
+    padding: 15px 25px;
+    margin: 40px 0px;
+    border-radius: 15px;
+    color: #212121;
+    background: #e8e8e8;
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+}
+.cajaMaps:hover {
+    color: #e8e8e8;
+    background-color: #5E503F;
+}
+.cajaMaps:hover::before { width: 100%; }
+.ListaMaps{
+    text-decoration: none;
+    color: black;
+}
+.ListaMaps:hover { color: #e8e8e8; }
+
+
+
+/* BOX-FOOTER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.boxFooter{
+    height: auto;
+    text-align: center !important;
+    padding: 20px;
+    background-color: #F2F4F3;
+    color: black;
+}
